@@ -11,7 +11,7 @@ if test (uname -s) = "Darwin"
     mate $argv
   end
 
-  function sed
-    gsed $argv
-  end
+  # function sed
+  #   gsed $argv
+  # end
 end
