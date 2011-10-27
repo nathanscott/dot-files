@@ -49,7 +49,6 @@ if [ "$TERM" != "dumb" ]; then
   alias lal="ls -lha $color_option"
 
   . ~/.scripts/j.sh
-
 else
   # TODO use path_helper to do this properly
   export PATH=/opt/local/bin:$PATH

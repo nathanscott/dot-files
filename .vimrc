@@ -89,3 +89,5 @@ set tabstop=2
 set softtabstop=2
 set mouse=a
 set mousehide
+
+set backupskip=/tmp/*,/private/tmp/*"

@@ -1,3 +1,4 @@
+[ -f ~/.bashrc ] && . ~/.bashrc
 for a in local $(ls /usr/ | grep -v local | grep -v gentoo); do
 	FULLPATH=/usr/$a
 	if [ -x $FULLPATH ]; then
