@@ -8,3 +8,14 @@ ls -1d .dot-files/.* | while read f; do
   [ "$f" == '.dot-files/.git' ] ||
   ln -vsf "$f" .
 done
+
+git clone git://github.com/nathanscott/oh-my-zsh.git ~/.oh-my-zsh
+
+git clone git://github.com/sstephenson/rbenv.git .rbenv
+
+mkdir -p .sources && cd .sources
+git clone git://github.com/sstephenson/ruby-build.git
+cd ruby-build
+./install.sh
+
+rbenv install 1.9.3-p0
