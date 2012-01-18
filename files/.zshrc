@@ -49,5 +49,7 @@ unsetopt correct_all
 # editor
 
 export EDITOR='mate -w'
-export PATH=/usr/local/bin:$PATHexport PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
+
 eval "$(rbenv init -)"
