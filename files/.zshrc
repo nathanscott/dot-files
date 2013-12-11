@@ -15,7 +15,7 @@ export ZSH_THEME="nathanscott"
 # export DISABLE_LS_COLORS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(rails rails3 git heroku textmate ruby lighthouse rvm bundler)
+plugins=(rails rails3 git heroku sublime ruby lighthouse rbenv bundler)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -25,10 +25,16 @@ source $ZSH/oh-my-zsh.sh
 alias g='git status -sb'
 alias ga='git add'
 alias gd='git diff'
-alias l="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias d='git diff --word-diff'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gd='git diff --word-diff'
 alias gr='git remote -v'
 
+alias gf='git flow'
+alias gt='gittower'
+
+alias p='ping google.com'
+alias o='open'
+alias s='subl'
 cds() { builtin cd "$@"; ll; }
 
 paras() {
@@ -38,7 +44,16 @@ paras() {
 alias para='rake parallel:spec\[8\]'
 
 alias t='tail -f'
+alias z='zeus'
+alias h='heroku'
 
+# bind keys
+
+bindkey    "^[[3~"          delete-char
+bindkey    "^[3;5~"         delete-char
+bindkey "^[[3~" delete-char
+bindkey "^[3;5~" delete-char
+bindkey "\e[3~" delete-char
 
 unsetopt correct_all
 
@@ -48,8 +63,11 @@ unsetopt correct_all
 
 # editor
 
-export EDITOR='mate -w'
-export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/.rbenv/bin:$PATH
+export EDITOR='subl -n -w'
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/opt:$PATH
+export PATH=$HOME/.rbenv/bin:/usr/local/share/npm/bin:$PATH
 
 eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+# export PATH="/usr/local/heroku/bin:$PATH"

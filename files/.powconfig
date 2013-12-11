@@ -1,1 +1,2 @@
 export PATH=$(rbenv prefix)/shims:$(rbenv prefix)/bin:$PATH
+export PATH=/Users/nathan/.rbenv/shims:/Users/nathan/.rbenv/bin:$PATH
